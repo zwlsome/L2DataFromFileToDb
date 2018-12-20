@@ -11,7 +11,7 @@ int main()
 		return -1;
 	}
 
-	if(NULL == mysql_real_connect(tpSql, "192.168.1.12", "root", "Gmax123!#", "QT2", 3306, NULL, 0))
+	if(NULL == mysql_real_connect(tpSql, "192.168.1.12", "root", "abc123", "QT2", 3306, NULL, 0))
 	{
 		mysql_close(tpSql);
 		printf("Failed to mysql_real_connect(): Error=%s", mysql_error(tpSql));
