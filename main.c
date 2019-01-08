@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <assert.h>
 #include "mysql/my_global.h"
 #include "mysql/mysql.h"
 
@@ -22,6 +23,10 @@ int main()
 	printf("Connect ok\r\n");
 
 	char tCh = getchar();
+
+	char* tpChar = (char*)malloc(1024);
+	tpChar += 100000000000;
+	*tpChar = 10;
 
 	mysql_close(tpSql);
 	printf("Closed\r\n");
